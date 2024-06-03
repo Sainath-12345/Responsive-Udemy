@@ -1,38 +1,987 @@
-.App {
-  text-align: center;
+
+*{
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.popup{
+  display: none;
+}
+.start{
+  color: rgb(245, 178, 34);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#categories, #develop ,#webdev-hide,#business-hide{
+  display: none;
+}
+#hidden-a:hover{
+  color: pink;
+  #categories{
+    a{
+      text-decoration: none;
+      line-height: 40px;
+      color: black;
+    }
+    width: 200px;
+    z-index: 2;
+    background-color: white;
+    display: block;
+    position: absolute; 
+    justify-content: center;
+  }
+  
+}
+
+#development:hover{
+  #develop{
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 200px;
+    width: 200px;
+    color: black;
+    background-color: white; 
+    z-index: 3;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#webdev:focus{
+  #develop{
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 200px;
+    width: 200px;
+    color: black;
+    background-color: white; 
+    z-index: 4;
+  }
+}
+
+#business:hover{
+    #business-hide{
+      display: block;
+      position: absolute;
+      top: 5px;
+      left: 200px;
+      width: 200px;
+      color: black;
+      background-color: white; 
+      z-index: 4;
+    }
+}
+
+#udemybus-hide,#teach-hide,#cart-hide{
+  display: none;
+}
+
+#udemybus:hover{
+  #udemybus-hide{
+    padding: 20px;
+    display: block;
+    position: absolute;
+    top: 80px;
+    left: 700px;
+    height: 180px;
+    width: 200px;
+    color: black;
+    background-color: white; 
+    z-index: 2;
+  }
+  #udemybus-hide button{
+    padding: 20px 30px;
+    color: white;
+    background-color: black;
+  }
+}
+
+#teach:hover{
+  #teach-hide{
+    padding: 20px;
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: 900px;
+    height: 180px;
+    width: 250px;
+    color: black;
+    background-color: white; 
+    z-index: 2;
+  }
+  #teach-hide button{
+    padding: 15px 50px;
+    color: white;
+    background-color: black;
+  }
+}
+
+#cart:hover{
+    #cart-hide{
+    padding: 20px;
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: 850px;
+    height: 80px;
+    width: 150px;
+    color: black;
+    background-color: white; 
+    z-index: 2;
+    h3{
+      color: blueviolet;
+    }
+    }
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+
+#firstContent{
+  background-image: url("https://img-c.udemycdn.com/notices/web_carousel_slide/image/139c6d08-df69-4a14-8e15-4d6085c62b03.jpg");  
+  position: relative;
+    top: 1vh;
+    height: 55vh;
+    width: 100%;
+}
+#content{
+  margin: 20px;
+}
+#logo{
+  height: 5vh;
+  width: 10vw;
+}
+li{
+  margin: 0px 5px;
+}
+nav{
+  list-style: none;
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 1.5rem 0rem;
+}
+.logo2{
+  height: 25px;
+  width: 25px;
+}
+#navip{
+  padding: 1vh 2vw;
+  border-radius: 20px;
+}
+.navbtn-1{
+  padding: 10px 20px;
+  font-weight: bold;
+}
+.navbtn-2{
+  padding: 10px 20px;
+  background-color: black;
+  color:white;
+  font-weight: bold;
+}
+#logo3{
+  height: 20px;
+  width: 20px;
+  padding: 8px;
+  border: 1px solid black;
+}
+#aside{
+  position: absolute;
+  left: 2rem;
+  top:11rem;
+  z-index: 1;
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  box-sizing: border-box;
+  height: 15vw;
+  width: 42vw;
+}
+#cards{
+  overflow: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 30px;
+  /* flex-wrap: wrap; */
+}
+#content p{
+  font-size: 25px;
+}
+#midfont{
+  display: block;
+}
+
+#midcontent-1{
+  overflow: auto;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  border-bottom: 1px solid rgb(145, 133, 133);
+}
+#img2, #img2 img {
+  height: 500px;
+  width: 70vw;
+}
+#boxes{
+  overflow: scroll;
+  flex-wrap: nowrap;
+  margin: 30px 0px;
+  display: flex;
+  justify-content: space-evenly;
+}
+#box{
+  align-items: center;
+  padding: 10px 20px;
+  margin: 0px 5px;
+  width: fit-content;
+  border: none;
+  border-radius: 30px;
+  line-height: 20px;
+  background-color:rgb(214, 215, 215);
+}
+#box:hover{
+    background-color:#93989e;
+}
+.card{
+  margin: 10px;
+  padding: 1px;
+  height:380px;
+  width: 600px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+#card1:hover{
+  .popup{
+    display: inline-block;
+    padding: 20px;
+    height: 450px;
+    width: 350px;
+    position: absolute;
+    top: 550vh;
+    left: 20vw;
+    background-color : rgb(243, 252, 250);
+    z-index: 2;
+    border-radius: 10px;
+  }
+  #popupbtn{
+    padding: 20px 80px;
+    margin: 20px;
+    color: white;
+    border: none;
+    background-color: blueviolet;
+  }
+  #heart{
+    padding: 10px;
+    position: relative;
+    top: 30px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    border-radius: 30px;
+  }
+}
+
+#card2:hover{
+  .popup{
+    display: inline-block;
+    padding: 20px;
+    height: 450px;
+    width: 350px;
+    position: absolute;
+    /* top: 80vh; */
+    top: 550vh;
+    left: 0vw;
+    background-color: rgb(243, 252, 250);
+    z-index: 2;
+    border-radius: 10px;
+  }
+  #popupbtn{
+    padding: 20px 80px;
+    margin: 20px;
+    color: white;
+    border: none;
+    background-color: blueviolet;
+  }
+  #heart{
+    padding: 10px;
+    position: relative;
+    top: 30px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    border-radius: 30px;
+  }
+}
+
+#card3:hover{
+  .popup{
+    display: inline-block;
+    padding: 20px;
+    height: 450px;
+    width: 350px;
+    position: absolute;
+    top: 550vh;
+    left: 60vw;
+    background-color:  rgb(243, 252, 250);
+    z-index: 2;
+    border-radius: 10px;
+  }
+  #popupbtn{
+    padding: 20px 80px;
+    margin: 20px;
+    color: white;
+    border: none;
+    background-color: blueviolet;
+  }
+  #heart{
+    padding: 10px;
+    position: relative;
+    top: 30px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    border-radius: 30px;
+  }
+}
+#card4:hover{
+  .popup{
+    display: inline-block;
+    padding: 20px;
+    height: 450px;
+    width: 350px;
+    position: absolute;
+    /* top: 80vh; */
+    top: 550vh;
+    left: 40vw;
+    background-color: rgb(243, 252, 250);
+    z-index: 2;
+    border-radius: 10px;
+  }
+  #popupbtn{
+    padding: 20px 80px;
+    margin: 20px;
+    color: white;
+    border: none;
+    background-color: blueviolet;
+  }
+  #heart{
+    padding: 10px;
+    position: relative;
+    top: 30px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    border-radius: 30px;
+  }
+}
+#card5:hover{
+  .popup{
+    display: inline-block;
+    padding: 20px;
+    height: 450px;
+    width: 350px;
+    position: absolute;
+    /* top: 80vh; */
+    top: 550vh;
+    left: 30vw;
+    background-color:  rgb(243, 252, 250);
+    z-index: 2;
+    border-radius: 10px;
+  }
+  #popupbtn{
+    padding: 20px 80px;
+    margin: 20px;
+    color: white;
+    border: none;
+    background-color: blueviolet;
+  }
+  #heart{
+    padding: 10px;
+    position: relative;
+    top: 30px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    border-radius: 30px;
+  }
+}
+#card6:hover{
+  .popup{
+    display: inline-block;
+    padding: 20px;
+    height: 450px;
+    width: 350px;
+    position: absolute;
+    /* top: 80vh; */
+    top: 550vh;
+    left: 50vw;
+    background-color: rgb(243, 252, 250);
+    z-index: 2;
+    border-radius: 10px;
+  }
+  #popupbtn{
+    padding: 20px 80px;
+    margin: 20px;
+    color: white;
+    border: none;
+    background-color: blueviolet;
+  }
+  #heart{
+    padding: 10px;
+    position: relative;
+    top: 30px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    border-radius: 30px;
+  }
+}
+
+
+#cards{
+  margin-top: 20px;
+}
+
+#cardimg{
+  height: 200px;
+  width: 300px;
+  border-radius: 10px;
+}
+h1{
+  font-size: 50px;
+}
+section{
+  display: flex;
+}
+#sidelogo{
+  display: none;
+}
+#search{
+  /* display: none; */
+  position: absolute;
+  top: 38px;
+  left: 390px;
+}
+#btn{
+  font-weight: bold;
+  padding: 15px 30px;
+  color: black;
+  border: 1px solid black;
+  background-color: white;
+}
+#logo-img p{
+  font-size: 20px;
+}
+.logos{
+  margin: 20px 40px;
+}
+.text{
+  font-size: 35px;
+}
+#secCard{
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(240, 246, 246);
+}
+#card0s{
+  padding: 30px;
+  display: block;
+}
+.card0{
+  padding: 5px 40px;
+  margin: 10px 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  display: flex;
+  box-sizing: border-box;
+
+}
+.card0:hover {
+  border: 2px solid blueviolet;
+  border-left: 7px solid blueviolet;
+}
+.card0img{
+  margin: 10px;
+  height: 80px;
+  width: 80px;
+}
+#sideimg{
+  height: 450px;
+  width: 600px;
+}
+footer{
+  background-color: #2d2f31;
+}
+#footSec,#footFirst{
+  display: flex;
+}
+#footFirst{
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid rgb(81, 76, 76);
+  padding: 15px 0px;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+#footSec{
+  margin-top: 20px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around; 
+  line-height: 25px;
+}
+#footSec a{
+   text-decoration: none;
+   color: white;
+   /* font-weight: bold; */
+}
+#footSec a:hover{
+  text-decoration: underline;
+}
+#globeicon{
+  margin-left: 100px;
+  background-color: #2d2f31;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 20px;
+}
+#lastlogo{
+  height: 200px;
+  width: 100px;
+  margin-left: 100px;
+}
+/* ------------------------------------------------------- */
+.btnsub{
+  padding:15px 100px;
+  margin :5px 30px;
+  color: white;
+  background-color: black;
+}
+#secCard1,#secCard2,#secCard3{
+  border-start-start-radius: 12px;
+  border-start-end-radius: 12px;
+  border-end-start-radius: 10px;
+  border-end-end-radius: 10px;
+  border: 1px solid rgb(201, 196, 196);
+  height: 500px;
+  width: 425px;
+  margin: 10px;
+  background-color: rgb(250, 246, 246);
+}
+#sectionCards,.test{
+  overflow: auto;
+}
+.lines{
+  padding: 30px 10px;
+}
+.test{
+  padding-bottom: 50px;
+}
+.test,.lines{
+    background-color: rgb(240, 246, 246);
+}
+.div1{
+  border-start-start-radius: 10px;
+  border-start-end-radius: 10px;
+  border-top: 10px solid blueviolet;
+  padding: 20px;
+  background-color: rgb(215, 228, 215);
+}
+.div2{
+  list-style: none;
+  text-indent: 5px;
+  padding: 20px;
+  text-indent: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.test1{
+  border: 1px solid rgb(194, 189, 189);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  height: 250px;
+  width: 280px;
+  h1{
+    font-size: 40px;
   }
-  to {
-    transform: rotate(360deg);
+  a{
+    padding: 10px;
+    color: blueviolet;
+  }
+  .innerdiv{
+    padding: 20px 10px;
+    margin: 10px;
+  }
+  #proficon{
+    height: 30px;
+    width: 40px;
   }
 }
+#nextTest{
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  button{
+    padding: 15px 20px;
+    color: black;
+    background-color: white;
+  }
+}
+#img2, #img2 img{
+  width: 70vw;
+  height: 600px;
+}
+#linksIn{
+  display: flex;
+  justify-content: space-around;
+}
+
+#links{
+  h1{
+    padding: 20px;
+    border-bottom: 1px solid #93989e;
+  }
+  height: 60vh;
+  width: 100vw;
+  background-color: rgb(245, 247, 248);
+}
+.link1,.link2{
+  line-height: 50px;
+  button{
+    padding: 15px 80px;
+  }
+  a{
+    color: blueviolet;
+  }
+}
+.link2{
+  padding: 10px;
+  line-height: 40px;
+}
+
+#sec4Par{
+  /* display: block; */
+}
+#sec4{
+  display: flex;
+}
+#sideImgLast{
+  height: 600px;
+  width: 800px;
+}
+.sec4Child{
+  padding: 50px;
+}
+.childDiv-1{
+  margin: 20px;
+}
+.childDiv{
+  display: flex;
+  padding: 20px;
+}
+
+
+@media screen and (max-width:1024px) and (max-height:1366px) {
+
+  #sidelogo{
+   display: none;
+  }
+  #firstContent {
+    background-image: url(https://img-c.udemycdn.com/notices/web_carousel_slide/image/139c6d08-df69-4a14-8e15-4d6085c62b03.jpg);
+    background-repeat: no-repeat;
+    height:25vh;
+    width: 100%;
+}
+  #aside{
+    height: 15vh;
+    width: 55vw;
+  }
+  nav{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #navip{
+    padding: 8px 2vw;
+  }
+  #logo{
+      height: 2rem;
+      width: 5rem;
+  }
+  #aside{
+    top: 12vh;
+  }
+  #cards{
+    text-align: center;
+    line-height: 30px;
+  }
+  #plans{
+    display: none;
+  }
+  .logo2{
+    display: inline-block;
+    height: 25px;
+    width: 50px;
+    position: relative;
+  }
+  .navbtn-2{
+    padding: 10px 20px;
+    border-radius: 3px;
+  }
+  #bai{
+    display: none;
+  }
+  #links{
+    height: 30vh;
+    width: 100%;
+  }
+  #sec4{
+    width: 100vw;
+    box-sizing: border-box;
+  }
+  #sideImgLast{
+    height: 500px;
+    width: 500px;
+  }
+
+  #udemybus:hover{
+    #udemybus-hide{
+      padding: 20px;
+      display: block;
+      position: absolute;
+      top: 80px;
+      left: 400px;
+      height: 180px;
+      width: 200px;
+      color: black;
+      background-color: white; 
+      z-index: 2;
+    }
+    #udemybus-hide button{
+      padding: 20px 30px;
+      color: white;
+      background-color: black;
+    }
+  }
+  #teach:hover{
+    #teach-hide{
+      padding: 20px;
+      display: block;
+      position: absolute;
+      top: 100px;
+      left: 550px;
+      height: 120px;
+      width: 250px;
+      color: black;
+      background-color: white; 
+      z-index: 2;
+    }
+    #teach-hide button{
+      padding: 15px 50px;
+      color: white;
+      background-color: black;
+    }
+  }
+  
+  #cart:hover{
+      #cart-hide{
+      padding: 20px;
+      display: block;
+      position: absolute;
+      top: 100px;
+      left: 650px;
+      height: 80px;
+      width: 150px;
+      color: black;
+      background-color: white; 
+      z-index: 2;
+      h3{
+        color: blueviolet;
+      }
+      }
+      
+  }
+
+  #search{
+    display: inline-block;
+    position: absolute;
+    height: 25px;
+    width: 50px;
+    padding: 20px;
+    top: 1.2vh;
+    left: 19vw;
+  }
+}
+
+
+
+@media only screen and (max-width:360px) and (max-height:740px){
+  /* @media (max-width: 50rem) { */
+  body {
+    /* background-color: rgb(221, 228, 230); */
+  }
+  /* #wholebody{
+    margin: 0;
+    padding: 0;
+    display: block;
+    height: 100vh;
+  }  */
+  #firstContent{
+      top: 1vh;
+      height: 30vh;
+      width: 100vw;
+  }
+  /* #content{
+    width: 100vw;
+    overflow: hidden;
+  } */
+  .a{
+    display: none;
+  }
+  #sec4Par{
+    display: none;
+  }
+  #links{
+    display: none;
+  }
+  #cards,#content,footer{
+    width: 100vw;
+    margin: 0, auto;
+  }
+  nav{
+    width: 100vw;
+    overflow: hidden;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+  }
+  #content{
+    margin: 20px;
+  }
+  #midcontent-1,#sectionCards, .test{
+    overflow: auto;
+    overflow-y: hidden;
+  }
+  #nextTest{
+    display: block;
+  }
+  #img2, #img2 img {
+    width: 100vw;
+    height: 300px;
+}
+  #boxes{
+    width: 360px;
+    overflow: scroll;
+    margin: 30px 0px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #sideimg{
+    height: 300px;
+    width: 320px;
+  }
+  .card0{
+    display: none;
+  }
+
+  #secimg{
+    position: relative;
+    width: 360px;
+    height: 200px;
+  }
+  #logo{
+    align-self: center;
+    display: inline-block;
+    height: 25px;
+    width: 100px;
+  }
+  #sidelogo{
+    display: inline-block;
+    height: 20px;
+    width: 50px;
+  }
+  .logo2{
+    display: inline-block;
+    height: 20px;
+    width: 50px;
+    position: relative;
+    
+  }
+  #search{
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 225px;
+  }
+  #aside{
+    height: 25vh;
+    width: 40vw;
+    position: absolute;
+    left: 5vh;
+    top:15vh;
+    z-index: 20;
+    background-color: white;
+    color: black;
+    padding: 0px 5px;
+  }
+  #aside h1,h1,.text{
+    font-size: 25px;
+  }
+  .text{
+    font-size: 20px;
+  }
+  #logo-img{
+    flex-wrap: wrap;
+  }
+
+  #content p{
+    font-size: 15px;
+  }
+  .card{
+    margin: 2px;
+    padding: 1px;
+    height:40vh;
+    width: 70vw;
+    border: 1px solid black;
+    border-radius: 10px;
+    /* box-sizing: border-box; */
+    text-align: center;
+    line-height: 25px;
+  }
+  
+  #cardimg{
+    height: 20vh;
+    width: 70vw;
+    border-radius: 10px;
+  }
+  footer{
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    height: fit-content;
+  }
+  #footFirst{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #footSec{
+    display: block;
+    padding: 20px;
+    line-height: 30px;
+  }
+  #globeicon{
+   display: none;
+  }
+  #lastlogo{
+    height: 100px;
+    position: relative;
+    right: 70px;
+  }
+}
+
